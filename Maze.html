@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> The Maze project </title>
+    <title>The Maze Project</title>
     <style>
-    
         body {
             font-family: 'Cairo', sans-serif;
             margin: 0;
             padding: 0;
             direction: rtl;
             text-align: right;
-            background-color: #5a4e4e;
+            background-image: url('https://elements-video-cover-images-0.imgix.net/files/dc6e07fe-1994-4969-958e-8be26a5becd8/inline_image_preview.jpg?auto=compress%2Cformat&fit=min&h=394&w=700&s=d92f5c34b2f06b4d93ad51eb4b94cda0');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
         }
 
-        /*  Main Page Title  */
+        /* Header Section */
         .header {
-            background: url('maze-bg.jpg') no-repeat center center/cover;
-            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
             color: rgb(255, 255, 255);
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -37,7 +40,26 @@
             margin-bottom: 30px;
         }
 
-        /*  button */
+        /* Navigation Bar */
+        .nav-bar {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-bar a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Button */
         .cta button {
             padding: 15px 30px;
             background-color: #3e983e;
@@ -53,7 +75,7 @@
             background-color: #a74a2e;
         }
 
-        /* features  */
+        /* Features Section */
         .features {
             padding: 50px 20px;
             background-color: white;
@@ -66,37 +88,103 @@
             color: #333;
         }
 
-        .feature-item {
-            margin-bottom: 30px;
+        .feature-card {
+            flex: 1;
+            max-width: 300px;
+            margin: 15px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .feature-item p {
+        .feature-card img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .feature-card p {
             font-size: 1.2rem;
             color: #666;
         }
 
-        /*  Flexible design for small screens   */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5rem;
-            }
+        /* Key Features Section */
+        .key-features {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
 
-            .header p {
-                font-size: 1.2rem;
-            }
+        .key-features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
 
-            .cta button {
-                padding: 10px 20px;
-                font-size: 1rem;
-            }
+        .features-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
 
-            .features h2 {
-                font-size: 2rem;
-            }
+        .feature-card img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
 
-            .features p {
-                font-size: 1rem;
-            }
+        /* About Section */
+        .about {
+            padding: 50px 20px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .about a {
+            color: #ff5722;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .about a:hover {
+            text-decoration: underline;
+        }
+
+        .team {
+            margin-top: 20px;
+        }
+
+        .team a {
+            display: block;
+            font-size: 1.2rem;
+            color: #333;
+            margin: 5px 0;
+            text-decoration: none;
+        }
+
+        .team a:hover {
+            text-decoration: underline;
         }
 
         /* Footer */
@@ -121,27 +209,92 @@
         .footer a:hover {
             text-decoration: underline;
         }
+
+        /* Video Section */
+        .video-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .video-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Main Page Title -->
+    <!-- Header Section -->
     <div class="header">
+        <div class="nav-bar">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#video">Video</a>
+            <a href="#about">Contact</a>
+        </div>
         <h1>The Maze</h1>
         <p>Lost in fun!</p>
         <div class="cta">
-            <button>Start playing now</button>
+            <button onclick="window.location.href='https://your-deployed-project-link.com'">Start playing now</button>
         </div>
     </div>
 
-    <!-- features  -->
-    <div class="features">
-        <h2> Game features </h2>
-        <div class="feature-item">
-            <p>Maze games offer the ability to anticipate, change direction, and reverse decisions, training the brain to react quickly. This concept, known as mental flexibility, helps players quickly sort through problems or decisions, respond more appropriately, plan ahead, and look forward.</p>
+    <!-- Features Section -->
+    <div class="features" id="features">
+        <h2>Game Features</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <img src="https://example.com/feature1.jpg" alt="Feature 1">
+                <h3>Feature 1</h3>
+                <p>Describe the first key feature of your maze game here.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://example.com/feature2.jpg" alt="Feature 2">
+                <h3>Feature 2</h3>
+                <p>Describe the second key feature of your maze game here.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://example.com/feature3.jpg" alt="Feature 3">
+                <h3>Feature 3</h3>
+                <p>Describe the third key feature of your maze game here.</p>
+            </div>
         </div>
-        <div class="feature-item">
-            <p>start your journey now!</p>
+    </div>
+
+   
+
+    <!-- About Section -->
+    <div class="about" id="about">
+        <h2>About The Project</h2>
+        <p>This project, "The Maze," was inspired by a personal interest in puzzle games and challenges. The goal was to create a game that not only entertains but also stimulates cognitive skills. I started working on this project in early 2024 as part of a personal initiative to dive deeper into game development. This is also a Portfolio Project for Holberton School, showcasing the skills learned throughout the program.</p>
+        <div class="team">
+            <a href="https://www.linkedin.com/in/mai-mohamed-513988278/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/mai-cs50" target="_blank">GitHub</a>
+            <a href="https://twitter.com/your-twitter-profile" target="_blank">Twitter</a>
+        </div>
+        <p>Check out the GitHub repository for the project: <a href="https://github.com/mai-cs50/Maze-Project.git" target="_blank">The Maze Project Repository</a></p>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-section" id="video">
+        <h2>Introduction Video</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/your-video-id" allowfullscreen></iframe>
         </div>
     </div>
 
