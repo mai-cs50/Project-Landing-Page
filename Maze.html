@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The Maze project </title>
+    <style>
+    
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            text-align: right;
+            background-color: #5a4e4e;
+        }
+
+        /*  Main Page Title  */
+        .header {
+            background: url('maze-bg.jpg') no-repeat center center/cover;
+            height: 100vh;
+            color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .header p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        /*  button */
+        .cta button {
+            padding: 15px 30px;
+            background-color: #3e983e;
+            border: none;
+            border-radius: 30px;
+            color: rgb(0, 0, 0);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta button:hover {
+            background-color: #a74a2e;
+        }
+
+        /* features  */
+        .features {
+            padding: 50px 20px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .feature-item {
+            margin-bottom: 30px;
+        }
+
+        .feature-item p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        /*  Flexible design for small screens   */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .header p {
+                font-size: 1.2rem;
+            }
+
+            .cta button {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+
+            .features h2 {
+                font-size: 2rem;
+            }
+
+            .features p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .footer a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Page Title -->
+    <div class="header">
+        <h1>The Maze</h1>
+        <p>Lost in fun!</p>
+        <div class="cta">
+            <button>Start playing now</button>
+        </div>
+    </div>
+
+    <!-- features  -->
+    <div class="features">
+        <h2> Game features </h2>
+        <div class="feature-item">
+            <p>Maze games offer the ability to anticipate, change direction, and reverse decisions, training the brain to react quickly. This concept, known as mental flexibility, helps players quickly sort through problems or decisions, respond more appropriately, plan ahead, and look forward.</p>
+        </div>
+        <div class="feature-item">
+            <p>start your journey now!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2024 All rights reserved to the Maze Game Team</p>
+    </div>
+
+</body>
+</html>
+
